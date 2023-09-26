@@ -23,6 +23,13 @@ export default function WordCollectionScreen() {
 
   return (
     <View style={styles.container}>
+      <View style={styles.dropZone}>
+        {selectedWords.map((word, index) => (
+          <TouchableOpacity key={index} style={styles.droppedWord}>
+            <Text>{word}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
       <DraggableFlatList
         data={data}
         renderItem={({ item, drag }) => (
