@@ -6,11 +6,7 @@ import styles from "./styles";
 export default function WordCollectionScreen() {
   const correctSentence = "Hello World";
   const [selectedWords, setSelectedWords] = useState([]);
-  const [data, setData] = useState([
-    { key: "Hello" },
-    { key: "World" }
-    // Добавьте здесь больше случайных слов
-  ]);
+  const [data, setData] = useState([{ key: "Hello" }, { key: "World" }]);
 
   const handleCheck = () => {
     const sentence = selectedWords.join(" ");
